@@ -1,9 +1,10 @@
+#created your own log file for log anlyger
 import re
 from collections import Counter
 import requests
 from urllib.parse import urlparse
 import hashlib
-def gt():
+def password_checker():
     i = input("ENTER YOUR PASSWORD: ")
     valid = True
 
@@ -33,14 +34,14 @@ def gt():
         print("PASSWORD IS WEAK")
 
 
-def gy():
+def log_anylazer():
     failed_login = Counter()
     successful_login = Counter()
     ip_attempts = Counter()
     total_event = 0
 
     try:
-        with open("mgt", "r", encoding="utf-8") as file:
+        with open("ml", "r", encoding="utf-8") as file:
             for line in file:
                 path = line.strip().split("|")
                 if len(path) < 5:
@@ -79,7 +80,7 @@ def gy():
         print(f"{ip} -> {count} total attempts")
 
 
-def ht():
+def https_security_header_checker():
     su = {
         "Strict-Transport-Security": "Helps enforce HTTPS",
         "Content-Security-Policy": "Controls which resources can load",
@@ -127,7 +128,7 @@ def ht():
     except requests.exceptions.RequestException:
         print("COULD NOT CONNECT TO THE WEBSITE")
 
-def zt():
+def file_hasher():
     file_path = input("Enter the file path: ").strip()
     hasher = hashlib.sha256()
 
@@ -147,7 +148,34 @@ def zt():
     except OSError as error:
         print("Error reading file:", error)
         return None
+def Exit():
+    print("GOODBEY")
+    break
+if __name__ == "__main__":
+    while True:
+        print("\n========== WELCOME TO THE SECURITY TOOLKIT ==========")
+        print("1. PASSWORD STRENGTH CHECKER")
+        print("2. LOG ANALYZER")
+        print("3. HTTPS SECURITY HEADER CHECKER")
+        print("4. FILE HASHER")
+        print("5. EXIT")
 
+        choice = input("Enter your choice (1-5): ").strip()
 
-zt()
+        if choice == "1":
+            password_checker()
+        elif choice == "2":
+            log_analyzer()
+        elif choice == "3":
+            https_security_header_checker()
+        elif choice == "4":
+            file_hasher()
+        elif choice == "5":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Enter a number from 1 to 5.")
 
+# you can add more functionality or options here if you want changes are allowed
+#MD
+    
