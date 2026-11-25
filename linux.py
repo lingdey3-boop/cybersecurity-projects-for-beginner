@@ -18,7 +18,12 @@ print("7.ls")
 print("8.touch")
 print("9.cp")
 print("10.mv")
-i="6"
+print("11.rm")
+print("12.grep")
+print("13.head")
+print("14.tail")
+print("15.wc")
+i=input("choose the number of the command you want to learn about: ").strip()
 if i=="1":
     print("ehco is function in linux which prints the words or sentance in the terminal")
     print('It works extly like pythons print function') 
